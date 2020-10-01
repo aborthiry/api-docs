@@ -6,6 +6,9 @@ A draft order is created when the merchant manages a pre-sale made outside the p
 #### Table of Contents
 [Create a draft order](#POST-draft-orders)
 
+Properties
+----------
+
 | Property                   | Explanation                                                                                              |
 | -------------------------- | -------------------------------------------------------------------------------------------------------- |
 | id                         | The unique numeric identifier for the Draft Order.                                                       |
