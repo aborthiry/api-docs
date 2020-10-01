@@ -17,8 +17,11 @@ A draft order is created when the merchant manages a pre-sale made outside the p
 | contact_name               | Customer's full name.                                                                                    |
 | contact_email              | Customer contact email.                                                                                  |
 | contact_phone              | Customer contact phone.                                                                                  |
-| owner_note                 | Store owner's note about the draft order.                                                                |
 | cpf_cnpj                   | Customer identity number.                                                                                |
+| owner_note                 | Store owner's note about the draft order.                                                                |
+| shipping_method            | Shipping method chosen by the consumer during the checkout process.                                      |
+| shipping_option            | The shipping option chosen by the customer during the checkout process.                                  |
+| shipping_option_code       | The shipping option code selected by the consumers.                                                      |
 | shipping_pickup_type       | "ship" if the order is going to be shipped; "pickup" if it's going to be picked up from a store branch.  |
 | shipping_name              | Customer's name who will receive the order.                                                              |
 | shipping_last_name         | Customer's lastname who will receive the order.                                                          |
@@ -31,9 +34,6 @@ A draft order is created when the merchant manages a pre-sale made outside the p
 | shipping_zipcode           | Customer's shipping zipcode where the order will be shipped.                                             |
 | shipping_province          | Customer's shipping province where the order will be shipped.                                            |
 | shipping_country           | Customer's shipping country where the order will be shipped.                                             |
-| shipping_method            | Shipping method chosen by the consumer during the checkout process.                                      |
-| shipping_option            | The shipping option chosen by the customer during the checkout process.                                  |
-| shipping_option_code       | The shipping option code selected by the consumers.                                                      |
 | shipping_extra             | Additional shipping information in JSON format.                                                          |
 | shipping_cost              | The shipping cost the customer has to pay to the store owner.                                            |
 | shipping_cost_owner        | The shipping cost the store owner has to pay to the shipping company.                                    |
@@ -107,4 +107,51 @@ Create a Draft Order.
 | unpaid                | The payment hasn't yet been made                    |
 | pending_confirmation  | The payment confirmation is pending                 |
 | paid                  | The payment was successfully confirmed and captured |
+
+#### POST /draft-orders
+
+`HTTP/1.1 201 Created`
+
+```json
+{
+   "id": "39138174",
+   "store_id": 1,
+   "storefront": "api",
+   "hash": "5be919b12255a1823d92869d40c9c3bda4503e37",
+   "currency": "ARS",
+   "lang": "es_AR",
+   "contact_name": "My Example",
+   "contact_email": "my.example@gmail.com",
+   "contact_phone":"4678-1232",
+   "cpf_cnpj": "12345678",
+   "owner_note": "My first draft order created",
+   "shipping_method": "draft",
+   "shipping_option": "Te vamos a contactar para coordinar la entrega!",
+   "shipping_option_code": "99999",
+   "shipping_pickup_type": "ship",
+   "shipping_name": "My",
+   "shipping_last_name": "Example",
+   "shipping_phone": "4678-1232",
+   "shipping_address": "Sta Rosa",
+   "shipping_number": "1535",
+   "shipping_floor": "",
+   "shipping_city": "Moron",
+   "shipping_locality": "Castelar",
+   "shipping_zipcode": "1712",
+   "shipping_province": "Gran Buenos Aires",
+   "shipping_country": 10,
+   "shipping_extra": "{\"show_time\":false,\"show_price\":true}",
+   "shipping_cost": 0,
+   "shipping_cost_owner": 0,
+   "shipping_additional_days": 0,
+   "gateway": "not-provided",
+   "total": 712,
+   "initiated_by": 372661,
+   "internal_extra": "{\"sale_channel\":\"\"}",
+   "checkout_url": "https:\/\/mystore.mitiendanube.com\/checkout\/v3\/order\/proxy\/39138177\/945f71f08398e25a7ae6fcf961e9cc10417278c8",
+   "started_checkout": "2020-10-01 19:52:04",
+   "updated_at": "2020-10-01 19:52:05",
+   "created_at": "2020-10-01 19:52:05"
+}
+
 ```
