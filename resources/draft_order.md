@@ -10,7 +10,7 @@ A draft order is created when the merchant manages a pre-sale made outside the p
 | -------------------------- | -------------------------------------------------------------------------------------------------------- |
 | id                         | The unique numeric identifier for the Draft Order.                                                       |
 | store_id                   | The unique numeric identifier for the Store.                                                             |
-| storefront                 | 
+| storefront                 | Name that refers to the means by which the draft order was managed.                                      |
 | hash                       | Specifies the location of the Draft Order.                                                               |
 | currency                   | The total spent's currency in [ISO 4217 format](http://en.wikipedia.org/wiki/ISO_4217).                  |
 | lang                       | Draft Order's language used by the customer during the checkout process.                                 |
@@ -20,32 +20,32 @@ A draft order is created when the merchant manages a pre-sale made outside the p
 | owner_note                 | Store owner's note about the draft order.                                                                |
 | cpf_cnpj                   | Customer identity number.                                                                                |
 | shipping_pickup_type       | "ship" if the order is going to be shipped; "pickup" if it's going to be picked up from a store branch.  |
-| shipping_name              | Customer's name who will receive the order.
-| shipping_last_name         | Customer's lastname who will receive the order.
-| shipping_phone             | Customer's phone who will receive the order.
-| shipping_address           | Customer's shipping address where the order will be shipped.
-| shipping_number            | Customer's shipping address number where the order will be shipped.
-| shipping_floor             | Customer's shipping floor where the order will be shipped.
-| shipping_locality          | Customer's shipping locality where the order will be shipped.
-| shipping_city              | Customer's shipping city where the order will be shipped.
-| shipping_zipcode           | Customer's shipping zipcode where the order will be shipped.
-| shipping_province          | Customer's shipping province where the order will be shipped.
-| shipping_country           | Customer's shipping country where the order will be shipped.
-| shipping_method            | Shipping method chosen by the consumer during the checkout process.
-| shipping_option            | The shipping option chosen by the customer during the checkout process.
-| shipping_option_code       | The shipping option code selected by the consumers.
-| shipping_extra             | Additional shipping information in JSON format.
-| shipping_cost              | The shipping cost the customer has to pay to the store owner.
-| shipping_cost_owner        | The shipping cost the store owner has to pay to the shipping company.
-| shipping_additional_days   |
-| gateway                    | Payment gateway code. It is set as not provided.
-| total                      | Total price of the draft order including shipping and discounts.
-| initiated_by               | 
-| internal_extra             | Additional draft order information. Includes the sales channel.
-| checkout_url               | Url of the checkout corresponding to the draft order.
-| started_checkout           | Date the checkout process started in [ISO 8601 format](http://es.wikipedia.org/wiki/ISO_8601).
-| updated_at                 | Date when the Draft Order was created in [ISO 8601 format](http://es.wikipedia.org/wiki/ISO_8601).
-| created_at                 | Date when the Draft Order was last updated in [ISO 8601 format](http://es.wikipedia.org/wiki/ISO_8601).
+| shipping_name              | Customer's name who will receive the order.                                                              |
+| shipping_last_name         | Customer's lastname who will receive the order.                                                          |
+| shipping_phone             | Customer's phone who will receive the order.                                                             |
+| shipping_address           | Customer's shipping address where the order will be shipped.                                             |
+| shipping_number            | Customer's shipping address number where the order will be shipped.                                      |
+| shipping_floor             | Customer's shipping floor where the order will be shipped.                                               |
+| shipping_locality          | Customer's shipping locality where the order will be shipped.                                            |
+| shipping_city              | Customer's shipping city where the order will be shipped.                                                |
+| shipping_zipcode           | Customer's shipping zipcode where the order will be shipped.                                             |
+| shipping_province          | Customer's shipping province where the order will be shipped.                                            |
+| shipping_country           | Customer's shipping country where the order will be shipped.                                             |
+| shipping_method            | Shipping method chosen by the consumer during the checkout process.                                      |
+| shipping_option            | The shipping option chosen by the customer during the checkout process.                                  |
+| shipping_option_code       | The shipping option code selected by the consumers.                                                      |
+| shipping_extra             | Additional shipping information in JSON format.                                                          |
+| shipping_cost              | The shipping cost the customer has to pay to the store owner.                                            |
+| shipping_cost_owner        | The shipping cost the store owner has to pay to the shipping company.                                    |
+| shipping_additional_days   | Additional days that are added to those of the shipment. It is set as 0.                                 |          
+| gateway                    | Payment gateway code. It is set as not provided.                                                         |
+| total                      | Total price of the draft order including shipping and discounts.                                         |
+| initiated_by               | Unique identifier number that indicates the user who started the Draft Order.                            |
+| internal_extra             | Additional draft order information. Includes the sales channel.                                          |
+| checkout_url               | Url of the checkout corresponding to the draft order.                                                    |
+| started_checkout           | Date the checkout process started in [ISO 8601 format](http://es.wikipedia.org/wiki/ISO_8601).           |
+| updated_at                 | Date when the Draft Order was created in [ISO 8601 format](http://es.wikipedia.org/wiki/ISO_8601).       |
+| created_at                 | Date when the Draft Order was last updated in [ISO 8601 format](http://es.wikipedia.org/wiki/ISO_8601).  |
 
 Endpoints
 ---------
