@@ -142,7 +142,7 @@ Create a Draft Order.
    "shipping_country": 10,
    "shipping_extra": {
       "show_time": false,
-      "show_price":true
+      "show_price": true
    },
    "shipping_cost": 0,
    "shipping_cost_owner": 0,
@@ -151,7 +151,7 @@ Create a Draft Order.
    "total": 712,
    "initiated_by": 372661,
    "internal_extra": {
-      "sale_channel":""
+      "sale_channel": ""
    },
    "checkout_url": "https://mystore.mitiendanube.com/checkout/v3/order/proxy/39138177/945f71f08398e25a7ae6fcf961e9cc10417278c8",
    "started_checkout": "2020-10-01 19:52:04",
